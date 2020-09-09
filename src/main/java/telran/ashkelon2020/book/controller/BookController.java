@@ -60,7 +60,7 @@ public class BookController {
 	}
 	
 	@DeleteMapping("/author/{authorName}")
-	public AuthorDto deleteAuthor(String authorName) {
+	public AuthorDto deleteAuthor(@PathVariable String authorName) {
 		return bookService.removeAuthor(authorName);
 	}
 	

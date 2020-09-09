@@ -18,4 +18,5 @@ public interface BookRepository extends JpaRepository<Book, String> {
 //	@Query("select p.publisherName, a.name from Book b, Publisher p, Author a where a.name =?1 group by p.publisherName")
 //	Stream<String> findPublishers(String authorName);
 	Stream<String> findAllPublishersByAuthors(Author author);
+	void removeBooksByAuthors(Author author);
 }
